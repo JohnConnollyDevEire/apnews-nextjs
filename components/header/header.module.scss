@@ -1,0 +1,58 @@
+@use '@/sass/mixins' as *;
+
+.header {
+  background-color: #000;
+  position: sticky;
+  height: var(--headerHeight);
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  width: 100%;
+  z-index: 100;
+
+  img {
+    max-width: unset;
+  }
+
+  .content {
+    @include flex(flex, row, center, space-between);
+    height: inherit;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media only screen and (min-width: 1024px) {
+      justify-content: flex-start;
+      padding-left: var(--horizontalPad);
+      padding-right: var(--horizontalPad);
+    }
+  }
+
+  .headerBtn,
+  .searchBtn {
+    @include button-reset;
+    @include flex(inline-flex, row, center, center);
+    height: inherit;
+    width: 60px;
+    flex-shrink: 0;
+
+    svg {
+      padding: 5px;
+      box-sizing: content-box;
+    }
+  }
+
+  .searchBtn {
+    @media only screen and (min-width: 1024px) {
+      margin-left: auto;
+    }
+  }
+
+  .searchBtn:hover {
+    svg {
+      background-color: #333;
+      border-radius: 3px;
+    }
+  }
+}

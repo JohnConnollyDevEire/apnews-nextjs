@@ -1,0 +1,48 @@
+:root {
+  --headerHeight: 60px;
+  --maxContentWidth: 1440px;
+  --horizontalPad: 20px;
+  --ledeContentPad: 20px;
+  --leadOffset: 60px;
+  --headlineMarginBottom: 10px;
+  --bodyExtraHorizontalPad: 0;
+  --storyBodyTopPad: 20px;
+  --moduleVerticalSpace: 40px;
+
+  --headlineFont: 3.2rem;
+  --caption-1: 1.3rem;
+
+  --color-border: #ccc;
+  --color-link: #0d6eff;
+
+  --body-1: 1.6rem;
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --leadOffset: 100px;
+    --bodyExtraHorizontalPad: 40px;
+    --moduleVerticalSpace: 60px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  :root {
+    --headerHeight: 55px;
+    --horizontalPad: 40px;
+    --ledeContentPad: 40px;
+    --leadOffset: 80px;
+    --headlineFont: 4.8rem;
+    --headlineMarginBottom: 20px;
+
+    --storyBodyTopPad: 40px;
+
+    --body-1: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  :root {
+    --headlineFont: 6rem;
+  }
+}

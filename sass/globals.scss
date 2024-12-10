@@ -1,0 +1,86 @@
+@use './variables.scss';
+@use './rich-text.scss';
+
+* {
+  line-height: calc(1em + 4px);
+}
+
+html {
+  font-size: 62.5%;
+
+  &[data-menu-open='true'] {
+    overflow: hidden;
+  }
+}
+
+body {
+  --webkit-font-smoothing: antialiased;
+  --moz-osx-font-smoothing: grayscale;
+  font-size: 1.8rem;
+  font-stretch: semi-condensed;
+  line-height: 1.2;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+[tabindex],
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+.content-width {
+  padding-left: var(--horizontalPad);
+  padding-right: var(--horizontalPad);
+  max-width: var(--maxContentWidth);
+  margin: 0 auto;
+}
+
+.unset-all {
+  all: unset;
+}
+
+.hidden {
+  display: none;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .lg-block {
+    display: block;
+  }
+
+  .lg-hidden {
+    display: none;
+  }
+}

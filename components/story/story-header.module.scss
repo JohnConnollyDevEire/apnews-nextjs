@@ -1,0 +1,30 @@
+.storyHeader {
+  background: linear-gradient(#000, #000, #313132);
+  color: #fff;
+  padding-bottom: calc(var(--leadOffset) + var(--horizontalPad));
+  padding-top: var(--horizontalPad);
+
+  h1 {
+    margin: 0;
+    font-size: var(--headlineFont);
+    margin-bottom: var(--headlineMarginBottom);
+    max-width: 980px;
+  }
+}
+
+.eyebrow {
+  margin-bottom: 10px;
+
+  a {
+    color: #ccc;
+    font-size: 1.4rem;
+    font-stretch: condensed;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

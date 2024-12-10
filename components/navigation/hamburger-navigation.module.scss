@@ -1,0 +1,60 @@
+@use '@/sass/mixins' as *;
+
+.hamburgerNavigation {
+  position: fixed;
+  top: var(--headerHeight);
+  height: calc(100vh - var(--headerHeight));
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  overflow-y: auto;
+
+  .content {
+    color: #000;
+    background: #fff;
+    width: 100%;
+    min-height: calc(100vh - var(--headerHeight));
+    padding: 0 5px;
+
+    @media only screen and (min-width: 1024px) {
+      width: 360px;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .searchForm {
+    padding: 5px 10%;
+
+    form {
+      @include flex(flex, row, center, flex-start);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+      height: 32px;
+    }
+
+    button {
+      @include button-reset();
+      flex-shrink: 0;
+      flex-basis: 32px;
+    }
+
+    svg {
+      padding: 0;
+      color: inherit;
+    }
+
+    input {
+      flex-grow: 1;
+      color: inherit;
+      font-size: 16px;
+      width: 100%;
+      margin-right: 5px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use '@/sass/mixins' as *;
+
+.searchBar {
+  background: #fff;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: var(--headerHeight);
+  width: 100%;
+  z-index: 25;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.searchForm {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  color: #000;
+
+  label {
+    width: 100%;
+  }
+
+  input {
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    height: 40px;
+    padding: 15px 40px 15px 10px;
+    width: 100%;
+    flex-shrink: 0;
+
+    @media only screen and (min-width: 768px) {
+      height: 50px;
+      padding: 15px 50px 15px 20px;
+    }
+  }
+
+  button {
+    @include button-reset;
+    @include flex();
+    width: 50px;
+  }
+}

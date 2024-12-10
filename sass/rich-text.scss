@@ -1,0 +1,224 @@
+/*
+	Note:
+	These styles are isolated here as RichText content is parsed as raw HTML, and are thus
+	not used as SCSS module classes/styles
+*/
+.rich-text {
+  .infobox {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 40px 0;
+    padding: 20px;
+
+    @media only screen and (min-width: 1440px) {
+      margin: 40px -40px;
+      padding: 40px;
+      width: calc(100% + 80px);
+    }
+  }
+
+  a {
+    color: var(--color-link);
+  }
+
+  > p {
+    font-stretch: normal;
+  }
+
+  > h2 {
+    font-size: 2.4rem;
+    font-stretch: normal;
+    font-weight: bold;
+    padding-top: 25px;
+
+    @media only screen and (min-width: 1024px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  > h3 {
+    font-size: 2rem;
+    font-stretch: normal;
+  }
+
+  // underline links inside paragraphs and lists, but not in the base
+  // as it underlines enhancements which we do not want underlined
+  > p,
+  > ul,
+  > ol,
+  p > ul,
+  p > ol,
+  h2,
+  h3 {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // fixing lists and lists of lists, but trying not to affect Enhancements that might
+  // have list markup in them
+  > ul,
+  > ol {
+    --listPadding: 18px;
+    --listItemPadding: 2px;
+
+    @media only screen and (min-width: 1024px) {
+      --listPadding: 20px;
+      --listItemPadding: 20px;
+    }
+
+    padding: 0 0 0 var(--listPadding);
+    margin: 20px 0;
+
+    li {
+      padding: 0 0 20px var(--listItemPadding);
+
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      & > ul,
+      & > ol {
+        padding: 20px 0 0 var(--listPadding);
+      }
+    }
+  }
+
+  > ul,
+  p > ul {
+    list-style: square;
+
+    li > ul {
+      list-style: square;
+    }
+  }
+
+  > ol,
+  p > ol {
+    @media only screen and (max-width: 1023px) {
+      --listItemPadding: 10px;
+    }
+
+    list-style: decimal;
+
+    li > ol {
+      list-style: lower-alpha;
+
+      li > ol {
+        list-style: lower-roman;
+      }
+    }
+  }
+
+  > p {
+    margin: 20px 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  > table {
+    width: 100%;
+    border: 1px solid var(--color-border);
+
+    tbody {
+      tr {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+          td {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      td {
+        padding: 0 15px;
+        border: 1px solid var(--color-border);
+        background-clip: padding-box;
+        min-height: 50px;
+        height: 50px;
+        position: relative;
+
+        &:first-child {
+          border-left: 0;
+        }
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  > table {
+    /* reset styles from migrated tables */
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate !important;
+    border: 0 !important;
+    overflow-x: auto;
+
+    /* shadow trick to get table to scroll */
+    background-image: linear-gradient(to right, white, white),
+      linear-gradient(to right, white, white),
+      linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)),
+      linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+    background-position:
+      left center,
+      right center,
+      left center,
+      right center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:
+      20px 100%,
+      20px 100%,
+      10px 100%,
+      10px 100%;
+    background-attachment: local, local, scroll, scroll;
+
+    tbody {
+      display: table;
+    }
+
+    tr {
+      margin: 0 !important;
+      border: 0 !important;
+    }
+
+    td {
+      word-break: keep-all;
+    }
+
+    tbody,
+    td {
+      border: 1px solid black !important;
+      border-collapse: collapse;
+    }
+    // just in case we have giant enhancements aligned
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  > p,
+  > ul,
+  > ol,
+  p > ul,
+  p > ol {
+    font-stretch: semi-condensed;
+    font-size: var(--body-1);
+    font-weight: 300;
+    line-height: 1.55;
+  }
+}

@@ -1,0 +1,57 @@
+@use '@/sass/mixins' as *;
+
+.storyAuthors {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media only screen and (min-width: 1024px) {
+    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.authorNames {
+  display: block;
+  font-size: 1.4rem;
+  font-stretch: condensed;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+.metaData {
+  font-size: 1.3rem;
+}
+
+.actions {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.shareBtn {
+  @include button-reset;
+  @include flex;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-stretch: semi-condensed;
+  font-style: normal;
+  font-weight: 700;
+  height: 30px;
+  line-height: 1.14;
+  padding: 7px;
+  gap: 5px;
+}

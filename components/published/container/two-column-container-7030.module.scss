@@ -1,0 +1,15 @@
+.container7030 {
+  display: grid;
+  gap: var(--moduleVerticalSpace);
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: auto 320px;
+    gap: 40px;
+  }
+}
+
+.column {
+  display: grid;
+  gap: var(--moduleVerticalSpace);
+  align-content: start;
+}

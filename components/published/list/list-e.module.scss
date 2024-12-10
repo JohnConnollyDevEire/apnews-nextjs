@@ -1,0 +1,110 @@
+.listE {
+  display: grid;
+  gap: 10px;
+
+  img {
+    border-radius: 3px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+  }
+}
+
+// Left column is the title and description, and more coverage
+.leftColumn {
+  padding-right: 24px;
+
+  @media only screen and (min-width: 768px) {
+    padding-right: 0;
+  }
+}
+
+// Right column is the media/image/carousel/video etc.
+.rightColumn {
+  order: -1;
+
+  @media only screen and (min-width: 768px) {
+    order: inherit;
+  }
+}
+
+.listTitle,
+.listDescription,
+.childPromoLink {
+  margin: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: #999;
+    }
+  }
+}
+
+.listTitle {
+  font-size: 18px;
+  font-weight: 700;
+
+  @media only screen and (min-width: 1280px) {
+    font-size: 24px;
+  }
+}
+
+.listDescription {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.listDivider {
+  margin-left: 0;
+  border: 0;
+  height: 1px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #ccc;
+
+  @media only screen and (min-width: 768px) {
+    max-width: calc(34.7% - 20px);
+    width: calc(34.7% - 20px);
+  }
+}
+
+.moreCoverage {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  font-size: 14px;
+  font-stretch: condensed;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.childPromoTitle {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: #999;
+    display: block;
+    height: 5px;
+    left: 5px;
+    top: 6px;
+    width: 5px;
+  }
+}

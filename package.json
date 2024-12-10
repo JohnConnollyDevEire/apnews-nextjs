@@ -1,0 +1,53 @@
+{
+  "name": "apnews-nextjs-poc-2024",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.10",
+    "@apollo/experimental-nextjs-app-support": "^0.11.6",
+    "@radix-ui/react-slot": "^1.1.0",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "immer": "^10.1.1",
+    "lucide-react": "^0.460.0",
+    "modern-normalize": "^3.0.1",
+    "next": "^15.0.3",
+    "next-themes": "^0.4.3",
+    "react": "^19.0.0-rc-2ec26bc4-20241111",
+    "react-dom": "^19.0.0-rc-2ec26bc4-20241111",
+    "use-immer": "^0.10.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.2",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@storybook/addon-essentials": "^8.5.0-alpha.4",
+    "@storybook/addon-interactions": "^8.5.0-alpha.4",
+    "@storybook/addon-onboarding": "^8.5.0-alpha.4",
+    "@storybook/addon-viewport": "^8.5.0-alpha.9",
+    "@storybook/blocks": "^8.5.0-alpha.4",
+    "@storybook/nextjs": "^8.5.0-alpha.4",
+    "@storybook/react": "^8.5.0-alpha.4",
+    "@storybook/test": "^8.5.0-alpha.4",
+    "@types/node": "^22.9.1",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "ajv": "^8.17.1",
+    "babel-plugin-react-compiler": "^19.0.0-beta-df7b47d-20241124",
+    "cross-fetch": "^4.0.0",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "^15.0.3",
+    "eslint-plugin-storybook": "^0.11.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.81.0",
+    "storybook": "^8.5.0-alpha.4",
+    "typescript": "^5.7.2"
+  }
+}

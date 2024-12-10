@@ -1,0 +1,9 @@
+.storyBody {
+  font-stretch: normal;
+  font-weight: 300;
+  line-height: 1.55;
+
+  &:last-child {
+    margin-bottom: var(--moduleVerticalSpace);
+  }
+}
