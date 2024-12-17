@@ -18,7 +18,7 @@ jobs:
         with:
           testFilePath: tests/jmeter-graphql-api.jmx
           outputReportsFolder: reports/
-          args: "--loglevel INFO"
+          args: "--loglevel INFO -JapiKey=${{ secrets.X_API_KEY }}"
 
       - uses: actions/upload-artifact@v3
         with:
