@@ -24,3 +24,5 @@ jobs:
         with:
           name: jmeter-test-results
           path: reports/
+          retention-days: 1
+
