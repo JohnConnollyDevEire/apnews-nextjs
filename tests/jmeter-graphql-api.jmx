@@ -45,7 +45,7 @@
             </elementProp>
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">Authorization</stringProp>
-              <stringProp name="Header.value">${__P(auth,xxx)}</stringProp>
+              <stringProp name="Header.value">Basic ${__P(auth,xxx)}</stringProp>
             </elementProp>
           </collectionProp>
         </HeaderManager>
