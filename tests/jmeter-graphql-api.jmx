@@ -56,7 +56,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;query&quot;:&quot;  query StoryQuery {\n    StoryPage(path: \&quot;/article/my-new-story\&quot;) {\n      id\n      pageType\n      typeId\n      webViewLink\n      datePublished\n      datePublishedISO\n      pageDisplayDate\n      datePublishedStamp\n      dateModified\n      dateModifiedISO\n      dateModifiedStamp\n      showUpdatedDate\n      description\n      environmentName\n      headline\n      iu\n      mediaAPIItemId\n      primaryMediaType\n      primarySection\n      production\n      secondarySections\n      ga4Featured\n      ga4LeadMedia\n      ga4LinkedVideo\n      ga4Style\n      searchAction\n      source\n      subHeadline\n      targetingPageType\n      targetingTags\n      eyebrow\n      pageTypeName\n      storyFullBody\n      title\n      authorByline\n      canonicalLink\n      category\n      contentId\n      isFeatured\n      language\n      jsonLinkedData\n      manifestLink\n      shouldDisableNativoAds\n      authorsBylineOverride\n      disableHeader\n      feedLink\n      ga4PageType\n      headerStickyTimeMs\n    }\n  }&quot;,&quot;variables&quot;:{}}</stringProp>
+                <stringProp name="Argument.value">{&quot;query&quot;: &quot;${graphQL}&quot;}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -99,6 +99,18 @@
           </objProp>
           <stringProp name="filename">test</stringProp>
         </ResultCollector>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GraphQL Body">
+          <stringProp name="filename">tests/jmeter-graphql-api.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
         <hashTree/>
       </hashTree>
     </hashTree>
