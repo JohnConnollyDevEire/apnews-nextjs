@@ -43,6 +43,10 @@
               <stringProp name="Header.name">Content-Type</stringProp>
               <stringProp name="Header.value">application/json</stringProp>
             </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">${__P(auth,xxx)}</stringProp>
+            </elementProp>
           </collectionProp>
         </HeaderManager>
         <hashTree/>
@@ -56,7 +60,7 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;query&quot;: &quot;${graphQL}&quot;}</stringProp>
+                <stringProp name="Argument.value">${graphQLTest}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -97,20 +101,23 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">test</stringProp>
+          <stringProp name="filename">/tmp/test</stringProp>
         </ResultCollector>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="GraphQL Body">
-          <stringProp name="filename">tests/jmeter-graphql-api.csv</stringProp>
-          <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="variableNames"></stringProp>
-          <boolProp name="ignoreFirstLine">false</boolProp>
-          <stringProp name="delimiter">,</stringProp>
-          <boolProp name="quotedData">false</boolProp>
-          <boolProp name="recycle">true</boolProp>
-          <boolProp name="stopThread">false</boolProp>
-          <stringProp name="shareMode">shareMode.all</stringProp>
-        </CSVDataSet>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="testFile" elementType="Argument">
+              <stringProp name="Argument.name">testFile</stringProp>
+              <stringProp name="Argument.value">${__P(testFileName)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="graphQLTest" elementType="Argument">
+              <stringProp name="Argument.name">graphQLTest</stringProp>
+              <stringProp name="Argument.value">${__FileToString(${__P(testFileName)},,)}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
         <hashTree/>
       </hashTree>
     </hashTree>
