@@ -18,7 +18,7 @@ jobs:
         with:
           testFilePath: tests/jmeter-graphql-api.jmx
           outputReportsFolder: reports/
-          args: "--loglevel INFO -l reports/story-query.jtl -l reports/story-query.log -JapiKey=${{ secrets.X_API_KEY }} -Jauth=${{ secrets.AUTH }} -JtestFileName=tests/story-query.graphql -Jprotocol=https -Jhost=origin.qa2-news.lower.ap.brightspot.cloud"
+          args: "--loglevel INFO -l reports/story-query.jtl -j reports/story-query.log -JapiKey=${{ secrets.X_API_KEY }} -Jauth=${{ secrets.AUTH }} -JtestFileName=tests/story-query.graphql -Jprotocol=https -Jhost=origin.qa2-news.lower.ap.brightspot.cloud"
 
       - uses: actions/upload-artifact@v4
         with:
